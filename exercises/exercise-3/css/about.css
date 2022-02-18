@@ -1,0 +1,22 @@
+body {
+    background: url ('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/underwater-near-ocean-surface-with-rising-bubbles-in-blue-sea-incredivfx.jpg') 
+    center center no-repeat;
+    background-position: top center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-action {
+    font-family: 'Rowdies', cursive;
+    color: ;
+    text-transform: uppercase;
+    font-size: 50px;
+}
