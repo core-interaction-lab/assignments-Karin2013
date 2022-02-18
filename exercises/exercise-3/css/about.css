@@ -1,6 +1,9 @@
+html, body {
+    min-height: 100%;
+}
+
 body {
-    background: url ('https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/underwater-near-ocean-surface-with-rising-bubbles-in-blue-sea-incredivfx.jpg') 
-    center center no-repeat;
+    background: url(image/background.jpg) center center no-repeat;
     background-position: top center;
     height: 100vh;
     margin: 0;
@@ -15,8 +18,27 @@ body {
 }
 
 .call-to-action {
+    text-align: center;
+}
+
+.call-to-action h1 {
     font-family: 'Rowdies', cursive;
-    color: ;
+    color: white;
     text-transform: uppercase;
     font-size: 50px;
 }
+
+.call-to-action a {
+    background: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+@media (min-width: 813px) {
+    .call-to-action h1 {
+        font-size: 80px;
+    }
+}
+
