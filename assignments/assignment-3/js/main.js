@@ -1,41 +1,57 @@
-const fetchVideogame_characters = async () => {
-    const response = await fetch('https://api.airtable.com/v0/appNi3MB1m3UHlrcy/Table%201?api_key=keyuozaLACi7qERJ6').then(data => data.json());
+const db = {
+    id: 'appNi3MB1m3UHlrcy',
+    table: 'Videogame_characters',
+    apiKey: 'keyuozaLACi7qERJ6'
+};
 
+const airtableUrl = `https://api.airtable.com/v0/appNi3MB1m3UHlrcy/videogame?api_key=keyuozaLACi7qERJ6`
+
+const fetchvideogame = async () => {
+    const response = await fetch(airtableUrl).then(data => data.json());
     console.log(response);
 
-    const characterContainer = document.getElementById('character-container');
+    const myObject = {
+        title: 'videogame',
+        release_date: '334824',
+    }
 
-    response.records.forEach(Videogame_characters  => {
-        console.log(Videogame_characters.fields);
-        const nameEl = document.createElement('article');
-        const elementEl = document.createElement('div');
-        const gameEl = document.createElement('div');
-        const imageEl = document.createElement('img');
+    const myArray = ['movie', 348927, 'fdiosj'];
 
-        nameEl.innerHTML = Videogame_characters.fields.name;
-        elementEl.innerHTML = Videogame_characters.fields.element;
+    const isReleased = true;
 
-        gameEl.innerHTML = Videogame_characters.fields.game;
-        imageEl.innerHTML = Videogame_characters.fields.image;
+    console.log( myObject.release_date )
+    console.log(myArray[2]);
 
-        nameEl.append(elementEl, gameEl, imageEl);
+    const container = document.getElementById('videogame-container');
 
-        characterContainer.appendChild(nameEl);
-    });
+    response.records.forEach((videogame) => {
+        console.log(videogame);
+        if (videogame.fields.Photo) {
+            console.log(videogame.fields.Photo[0].url);
+            const photoImg = document.createElement('img');
+            photoImg.src = videogame.fields.Photo[0].url;
+            //posterImg.setAttribute('src', movie.fields.poster[0].url);
+            container.append(photoImg);
+        }
+        if (videogame.fields.Name) {
+            console.log(videogame.fields.Name);
+        }
 
-    const linkTags = document.querySelectorAll('.imdb-link');
-    console.log(linkTags);
-    linkTags.forEach((link, index) => {
-        const linkColor = link.style.color;
-        link.id = `my-link-${index + 1}`;
-        link.addEventListener('mouseover', (evt) => {
-            link.style.color = "green";
-        });
+        if (videogame.fields.Name) {
+            const NameEl = document.createElement('p');
+            NameEl.innerHTML = videogame.fields.Name;
+            NameEl.classList.add('videogame-name');
+            container.append( NameEl);
+        }
+    
 
-        link.addEventListener('mouseout', evt => {
-            link.style.color = linkColor;
-        });
+        if (videogame.fields.element) {
+            const elementEl = document.createElement('p');
+            elementEl.innerHTML = videogame.fields.element;
+            elementEl.classList.add('videogame-description');
+            container.append(elementEl);
+        }
     });
 };
 
-fetchVideogame_characters();
+fetchvideogame();
