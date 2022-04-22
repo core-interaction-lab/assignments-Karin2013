@@ -1,0 +1,132 @@
+body {
+    background: #13295A;
+    background-size: 100%;
+}
+
+.homepage {
+     height: 600px;
+     width: 100%;
+}
+
+.homepage2 {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #13295A, #23407A, #4068B1);
+    border: 0px;
+}
+
+.image {
+    margin-top: -40px;
+}
+
+.image1 {
+    position: absolute;
+    left: 513px;
+    top: 304px;
+    height: 177px;
+    width: 413px;
+}
+
+.image2 {
+    position: absolute;
+    left: 508px;
+    top: 297px;
+    height: 191px;
+    width: 423px;
+}
+
+h1 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 64px;
+    color: #943DC6;
+    text-align: center;
+    text-shadow: 0 0 8px #943DC6;
+    
+}
+
+h2 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    width: 200px;
+    line-height: 35px;
+    margin-top: -40px;
+    text-shadow: 0 0 8px #fff;
+}
+
+
+h3 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    text-shadow: 0 0 8px #fff;
+}
+
+h5 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h5:hover {
+    text-shadow: 0 0 8px #fff;
+}
+
+.text1 {
+    margin-top: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    justify-items: center;
+}
+
+
+.scroll {
+    color: #FFFFFF;
+    text-decoration: none;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {color: white;}
+    50%  {color: #13295A;}
+    100%  {color: white;}
+}
+
+.menu {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    justify-items: center;
+}
+
+.element {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.symbol {
+    height: 85px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

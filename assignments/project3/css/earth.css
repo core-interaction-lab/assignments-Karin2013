@@ -1,0 +1,110 @@
+body {
+    height: 830px;
+    background-image: linear-gradient(to bottom, #653D20, #7E895E, #CAC297);
+}
+
+.bar {
+    height: 75px;
+    width: 1100px;
+    justify-self: center;
+    margin-left: 150px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.videogame-photo {
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.scroll {
+    height: 680px;
+    overflow-y: scroll;
+}
+
+#grid {
+    margin-left: 120px;
+    margin-right: 430px; 
+}
+
+#gallery {
+    margin-left: 120px;
+    margin-right: 430px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+
+.icon {
+    position: absolute;
+    top: 300px;
+    right: 120px;
+}
+
+.symbol {
+    height: 185px;
+}
+
+h5 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 40px;
+    color: #B6672D;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h6 {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 3px;
+}
+
+h6:hover {
+    text-shadow: 0 0 8px #fff;
+}
+
+.menu {
+    position: absolute;
+    top: 5px;
+    left: 180px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    justify-content: center;
+    place-items: center;
+    justify-items: center;
+}
+
+.back {
+    position: absolute;
+    top: 60px;
+    left: 1120px;
+}
+
+.element {
+    margin-top: 35px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.symbol {
+    height: 40px;
+    width: 37px;
+}
+
+.icon1 {
+    height: 180px;
+    width: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
