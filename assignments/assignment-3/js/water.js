@@ -26,10 +26,10 @@ const fetchvideogame = async () => {
     const gallery = document.getElementById('gallery');
     const grid = document.getElementById('grid');
 
-    const fireRecords = response.records.filter(item => item.fields.element === "Fire");
-    console.log(fireRecords);
+    const waterRecords = response.records.filter(item => item.fields.element === "Water");
+    console.log(waterRecords);
 
-    fireRecords.forEach((videogame) => {
+    waterRecords.forEach((videogame) => {
         console.log(videogame);
         const itemContainer = document.createElement('article');
         if (videogame.fields.Photo) {
@@ -39,6 +39,16 @@ const fetchvideogame = async () => {
             photoImg.classList.add('videogame-photo');
             itemContainer.append(photoImg);
         }
+
+        if (videogame.fields.background) {
+            console.log(videogame.fields.background[0].url);
+            const backgroundImg = document.createElement('img');
+            backgroundImg.src = videogame.fields.background[0].url;
+            backgroundImg.classList.add('videogame-background');
+            itemContainer.append(backgroundImg);
+        }
+
+        
         if (videogame.fields.Name) {
             console.log(videogame.fields.Name);
         }

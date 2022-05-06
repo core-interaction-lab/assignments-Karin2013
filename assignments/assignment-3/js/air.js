@@ -26,12 +26,13 @@ const fetchvideogame = async () => {
     const gallery = document.getElementById('gallery');
     const grid = document.getElementById('grid');
 
-    const fireRecords = response.records.filter(item => item.fields.element === "Fire");
-    console.log(fireRecords);
+    const airRecords = response.records.filter(item => item.fields.element === "Air");
+    console.log(airRecords);
 
-    fireRecords.forEach((videogame) => {
+    airRecords.forEach((videogame) => {
         console.log(videogame);
         const itemContainer = document.createElement('article');
+        itemContainer.classList.add('container');
         if (videogame.fields.Photo) {
             console.log(videogame.fields.Photo[0].url);
             const photoImg = document.createElement('img');
@@ -39,6 +40,15 @@ const fetchvideogame = async () => {
             photoImg.classList.add('videogame-photo');
             itemContainer.append(photoImg);
         }
+
+        if (videogame.fields.background) {
+            console.log(videogame.fields.background[0].url);
+            const backgroundImg = document.createElement('img');
+            backgroundImg.src = videogame.fields.background[0].url;
+            backgroundImg.classList.add('videogame-background');
+            itemContainer.append(backgroundImg);
+        }
+
         if (videogame.fields.Name) {
             console.log(videogame.fields.Name);
         }
@@ -70,19 +80,21 @@ fetchvideogame();
 
 var btn1 = document.getElementById('btn1');
 
+
 function changeImage() {
-   document.getElementById('btn1').src = "image/icon1.png";
-   document.getElementById('name').innerHTML = "Fire";
-   document.getElementById('name').style.color ="#E94F86";
-   document.getElementById('background').style.backgroundImage = "linear-gradient(to bottom, #3A2D86, #7F48A0, #C27BA6)";
-   response.records.filter(videogame => videogame.fields.Photo === "Fire").forEach();
-}
+    document.getElementById('btn1').src = "image/icon1.png";
+    document.getElementById('name').innerHTML = "Fire";
+    document.getElementById('name').style.color ="#E94F86";
+    document.getElementById('background').style.backgroundImage = "linear-gradient(to bottom, #3A2D86, #7F48A0, #C27BA6)";  
+}  
+
 
 function changeImage2() {
     document.getElementById('btn1').src = "image/icon2.png";
     document.getElementById('name').innerHTML = "Air";
     document.getElementById('name').style.color ="#46754B";
     document.getElementById('background').style.backgroundImage = "linear-gradient(to bottom, #2D5B86, #8AC9BE, #BBC8B8)";
+
 }
 
 function changeImage3() {
@@ -90,10 +102,12 @@ function changeImage3() {
     document.getElementById('name').innerHTML = "Water";
     document.getElementById('name').style.color ="#3A2D86";
     document.getElementById('background').style.backgroundImage = "linear-gradient(to bottom, #1A30A6, #8A97C5, #ADD7E4)";
+
 }
 function changeImage4() {
     document.getElementById('btn1').src = "image/icon4.png";
     document.getElementById('name').innerHTML = "Earth";
     document.getElementById('name').style.color ="#B6672D";
     document.getElementById('background').style.backgroundImage = "linear-gradient(to bottom, #653D20, #7E895E, #CAC297)";
+   
 }

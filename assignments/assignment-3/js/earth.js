@@ -26,10 +26,10 @@ const fetchvideogame = async () => {
     const gallery = document.getElementById('gallery');
     const grid = document.getElementById('grid');
 
-    const fireRecords = response.records.filter(item => item.fields.element === "Fire");
-    console.log(fireRecords);
+    const earthRecords = response.records.filter(item => item.fields.element === "Earth");
+    console.log(earthRecords);
 
-    fireRecords.forEach((videogame) => {
+    earthRecords.forEach((videogame) => {
         console.log(videogame);
         const itemContainer = document.createElement('article');
         if (videogame.fields.Photo) {
@@ -39,6 +39,16 @@ const fetchvideogame = async () => {
             photoImg.classList.add('videogame-photo');
             itemContainer.append(photoImg);
         }
+
+        if (videogame.fields.background) {
+            console.log(videogame.fields.background[0].url);
+            const backgroundImg = document.createElement('img');
+            backgroundImg.src = videogame.fields.background[0].url;
+            backgroundImg.classList.add('videogame-background');
+            itemContainer.append(backgroundImg);
+        }
+
+
         if (videogame.fields.Name) {
             console.log(videogame.fields.Name);
         }
@@ -67,6 +77,16 @@ const fetchvideogame = async () => {
 
 fetchvideogame();
 
+document.getElementsByClassName("videogame-photo").addEventListener('mouseover', mouseOver);
+document.getElementsByClassName("videogame-photo").addEventListener('mouseout', mouseOut);
+
+function mouseOver() {
+  document.getElementsByClassName("videogame-name").classList.getAttribute("videogame-nameactive");
+}
+
+function mouseOut() {
+  document.getElementsByClassName("videogame-name").classList.getAttribute("videogame-name");
+}
 
 var btn1 = document.getElementById('btn1');
 

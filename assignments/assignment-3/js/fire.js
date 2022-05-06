@@ -39,6 +39,15 @@ const fetchvideogame = async () => {
             photoImg.classList.add('videogame-photo');
             itemContainer.append(photoImg);
         }
+
+        if (videogame.fields.background) {
+            console.log(videogame.fields.background[0].url);
+            const backgroundImg = document.createElement('img');
+            backgroundImg.src = videogame.fields.background[0].url;
+            backgroundImg.classList.add('videogame-background');
+            itemContainer.append(backgroundImg);
+        }
+
         if (videogame.fields.Name) {
             console.log(videogame.fields.Name);
         }
@@ -57,7 +66,9 @@ const fetchvideogame = async () => {
             gameEl.classList.add('videogame-description');
             itemContainer.append(gameEl);
         }
+        
         gallery.append(itemContainer);
+
     });
 
     // response.records.filter(videogame =>
@@ -75,7 +86,6 @@ function changeImage() {
    document.getElementById('name').innerHTML = "Fire";
    document.getElementById('name').style.color ="#E94F86";
    document.getElementById('background').style.backgroundImage = "linear-gradient(to bottom, #3A2D86, #7F48A0, #C27BA6)";
-   response.records.filter(videogame => videogame.fields.Photo === "Fire").forEach();
 }
 
 function changeImage2() {
