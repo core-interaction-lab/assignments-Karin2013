@@ -1,6 +1,16 @@
+body {
+  text-align: center;
+  background: hsl(204 100% 5%);
+  background-image: url(/images/34.png);
+  color: white;
+  min-block-size: 200vh;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+
+}
+
 .content {
-  display: flex;
-  padding: 0 .5rem;
 }
 
 section {
@@ -17,3 +27,30 @@ form input {
   display: block;
   margin-bottom: .5rem;
 }
+
+#result {
+  visibility: hidden;
+  font-family: 'Overlock', cursive;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.glow {
+  line-height: 250%;
+  font-size: 70px;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #ab88ec, 0 0 40px #ab88ec, 0 0 50px #ab88ec, 0 0 60px #ab88ec, 0 0 70px #ab88ec;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 30px #7168ee, 0 0 40px #7168ee, 0 0 50px #7168ee, 0 0 60px #7168ee, 0 0 70px #7168ee, 0 0 80px #7168ee;
+  }
+}
+
+

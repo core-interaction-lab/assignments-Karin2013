@@ -2,9 +2,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Overlock&display=swap" rel="stylesheet">
     </head>
     <body>
         <main class="content">
+
+            <header>
+                <h1 class="glow">Madlib Story Maker</h1>
+            </header>
             <section>
                 <form id="madlib-form">
                     <input type="text" name="input-1" placeholder="Enter a article of clothing" required />
@@ -23,11 +30,11 @@
                     <input type="text" name="input-14" placeholder="Enter an adjective" required />
                     <input type="text" name="input-15" placeholder="Enter a field of study" required />
     
-                    <button type="submit">Finish</button>
+                    <button id="button" type="submit">Finish</button>
                 </form>
             </section>
             <section>
-                <p>
+                <p id="result">
                     I scoured my closet for the perfect <span class="input-value" data-input="input-1"></span> 
                     to wear. Dressing for the <span class="input-value" data-input="input-2"></span> place 
                     around isn't easy. Sweating <span class="input-value" data-input="input-3"></span> during the 

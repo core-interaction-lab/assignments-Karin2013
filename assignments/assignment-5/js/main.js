@@ -12,3 +12,10 @@ formEl.addEventListener('submit', e => {
         span.innerHTML = formData.get(span.dataset.input);
     });
 });
+
+
+document.getElementById("button").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("result").style.visibility = "visible";
+}
