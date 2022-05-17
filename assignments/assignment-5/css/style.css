@@ -13,7 +13,7 @@ header {
 }
 
 .content {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 #madlib-form {
@@ -32,7 +32,7 @@ section {
 
 .input-value {
   display: inline-block;
-  min-width: 50px;
+  min-width: 60px;
   border-bottom: 1px solid black;
   color: white;
 }
@@ -50,7 +50,17 @@ form input {
   text-align: left;
   color: white;
   width: 750px; 
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
 }
+
+@keyframes example {
+  0%   {color: hsl(204 100% 5%);}
+  50%  {color: hsl(204 100% 5%);}
+  100%  {color: #ffffff;}
+}
+
 
 .glow {
   line-height: 250%;
@@ -70,7 +80,7 @@ form input {
 }
 
 #button {
-  margin-top: 100px;
+  margin-top: 70px;
   margin-left: 200px;
   margin-right: 200px;
   width: 230px;
@@ -79,6 +89,7 @@ form input {
   border: 1px solid white;
   border-radius: 20px;
 }
+
 
 input {
     background-color: #b7ffd700;
@@ -94,6 +105,7 @@ input::placeholder {
     color: rgb(255, 255, 255); 
     text-align: center;
     font-family: 'Overlock', cursive;
+    font-size: 17px;
     
 }
 
@@ -104,10 +116,21 @@ input::placeholder {
 }
 
 #title {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   font-family: 'Overlock', cursive;
-  font-size: 35px;
+  font-size: 25px;
   text-align: center;
-  visibility: hidden;
-  
+  color: #fff;
+}
+
+#again {
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  width: 230px;
+  height: 70px;
+  background-color: #b7ffd700;
+  border: 1px solid white;
+  border-radius: 20px;
 }
