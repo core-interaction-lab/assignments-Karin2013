@@ -18,4 +18,6 @@ document.getElementById("button").addEventListener("click", myFunction);
 
 function myFunction() {
   document.getElementById("result").style.visibility = "visible";
+  document.getElementById("title").style.visibility = "visible";
+  
 }
