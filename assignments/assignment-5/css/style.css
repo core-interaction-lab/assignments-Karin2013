@@ -18,12 +18,12 @@ header {
 
 #madlib-form {
     display: grid;
-    margin-left: 40px;
-    margin-right: 80px; 
+    margin-left: 150px;
+    margin-right: 150px; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 60px;
-    grid-row-gap: 60px; 
+    grid-column-gap: 40px;
+    grid-row-gap: 40px; 
 }
 
 section {
@@ -43,7 +43,6 @@ form input {
 }
 
 #result {
-  visibility: hidden;
   font-family: 'Overlock', cursive;
   font-size: 20px;
   line-height: 30px;
@@ -81,8 +80,11 @@ form input {
 
 #button {
   margin-top: 70px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: absolute;
+  top: 600px;
+  left: 600px;
   width: 230px;
   height: 70px;
   background-color: #b7ffd700;
@@ -94,7 +96,7 @@ form input {
 input {
     background-color: #b7ffd700;
     height: 180%;
-    width: 120%; 
+    width: 320px; 
     color: #fff;
     border: 1px solid white;
     border-radius: 20px;

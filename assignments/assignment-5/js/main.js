@@ -11,18 +11,11 @@ formEl.addEventListener('submit', e => {
     spanEls.forEach(span => {
         span.innerHTML = formData.get(span.dataset.input);
     });
+
+    document.getElementById("first").style.display = "none";
+    document.getElementById("second").style.display = "block";
 });
 
-
-document.getElementById("button").addEventListener("click", myFunction);
-
-function myFunction() {
-  document.getElementById("result").style.visibility = "visible";
-  document.getElementById("title").style.display = "none";
-  document.getElementById("first").style.display = "none";
-  document.getElementById("second").style.display = "block";
-
-}
 
 document.getElementById("again").addEventListener("click", myFunction1);
 
