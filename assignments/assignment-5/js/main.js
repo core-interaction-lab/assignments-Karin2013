@@ -20,6 +20,7 @@ function myFunction() {
   document.getElementById("result").style.visibility = "visible";
   document.getElementById("title").style.display = "none";
   document.getElementById("first").style.display = "none";
+  document.getElementById("second").style.display = "block";
 
 }
 
